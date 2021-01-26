@@ -1,0 +1,107 @@
+.main-nav {
+  margin-bottom: 54px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 132px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0;
+  }
+}
+
+.main-nav__list {
+  .list ();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet) {
+    align-items: flex-start;
+  }
+
+  @media (min-width: @desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.main-nav__link {
+  position: relative;
+  display: block;
+  height: 35px;
+  padding: 0 10px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+  color: @blue;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+
+  &:hover,
+  &:focus {
+    color: @basic-yellow;
+  }
+
+  &:active {
+    color: @basic-yellow;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet) {
+    height: 71px;
+    padding: 0;
+    padding-right: 30px;
+    font-size: 60px;
+    line-height: 71px;
+  }
+
+  @media (min-width: @desktop) {
+    height: 20px;
+    padding-right: 19px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: @white;
+  }
+}
+
+.page-header__logo-wrapper--scroll .main-nav__link {
+  @media (min-width: @desktop) {
+    color: @blue;
+
+    &:hover,
+    &:focus {
+      color: @basic-yellow;
+    }
+  }
+}
+
+.main-nav__link:hover .main-nav__link-text,
+.main-nav__link:focus .main-nav__link-text {
+  transform: translateY(-100%);
+}
+
+.main-nav__link-text {
+  display: block;
+  padding: 0 10px;
+  transition: transform 0.3s;
+
+  &::before {
+    content: attr(data-hover);
+    position: absolute;
+    top: 100%;
+    font-weight: bold;
+    transform: translate3d(0, 0, 0);
+  }
+
+  @media (min-width: @tablet) {
+    padding: 0;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-right: 15px;
+  }
+}

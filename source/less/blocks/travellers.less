@@ -1,0 +1,455 @@
+.travellers {
+  background-color: @grey-light;
+}
+
+.travellers__wrapper {
+  .container-mobile ();
+  padding-top: 66px;
+  padding-bottom: 30px;
+  background: @blue url("../img/bg-travellers-mobile.png") 0 34px no-repeat;
+  background-size: 92% auto;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-travellers-mobile@2x.png");
+  }
+
+  @media (min-width: @tablet) {
+    .container-tablet-big ();
+    padding-top: 137px;
+    padding-bottom: 87px;
+    background: @blue url("../img/bg-travellers-tablet.png") no-repeat;
+    background-position-x: 35%;
+    background-position-y: 71px;
+    background-size: 85% auto;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-travellers-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+    background-image: url("../img/bg-travellers-desktop.png");
+    background-position-x: 7%;
+    background-size: 44% auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-travellers-desktop@2x.png");
+    }
+  }
+}
+
+.travellers__inner {
+  @media (min-width: @desktop) {
+    .container-desktop ();
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content max-content 1fr max-content;
+    grid-column-gap: 60px;
+    min-height: 751px;
+    padding-top: 126px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+  }
+}
+
+.travellers__title {
+  .container-mobile ();
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 56px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 70px;
+  }
+}
+
+.travellers__text {
+  .container-mobile ();
+  margin: 0;
+  color: @white;
+
+  &--special {
+    margin-top: 20px;
+    margin-bottom: 56px;
+    font-weight: bold;
+  }
+
+  @media (min-width: @tablet) {
+    max-width: 70%;
+    padding: 0;
+    font-size: 28px;
+    line-height: 34px;
+
+    &--special {
+      margin-top: 40px;
+      margin-bottom: 61px;
+      font-size: 21px;
+      line-height: 24px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 70px;
+
+    &--special {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.travellers__text br {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: block;
+  }
+}
+
+.travellers__list {
+  .list();
+
+  &--transports {
+    display: flex;
+    align-self: center;
+  }
+
+  &--countries {
+    position: absolute;
+    top: -11px;
+    display: flex;
+    align-self: center;
+    padding-right: 6px;
+  }
+
+  @media (min-width: @tablet) {
+    &--users {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 50px;
+    }
+
+    &--transports {
+      padding-left: 5px;
+    }
+
+    &--countries {
+      padding-right: 0;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    &--users {
+      grid-column-start: 2;
+      grid-column-end: -1;
+      grid-row-start: 1;
+      grid-row-end: -1;
+      grid-column-gap: 60px;
+      padding-top: 8px;
+    }
+  }
+}
+
+.travellers__image-wrapper {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+
+  @media (min-width: @tablet) {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}
+
+.travellers__link {
+  position: relative;
+  display: block;
+  min-height: 428px;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 9px @black-16;
+  }
+}
+
+.travellers__link:hover .travellers__image,
+.travellers__link:focus .travellers__image {
+  transform: scale(1.1);
+}
+
+.travellers__info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: -6px;
+  padding: 25px 36px 12px 41px;
+  background-color: @white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  @media (min-width: @tablet) {
+    padding: 29px 30px 14px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
+
+.travellers__info-title {
+  position: relative;
+  align-self: center;
+  margin: 0;
+  margin-bottom: 15px;
+  padding-right: 4px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: @basic-blue-light;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -17px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+
+  &--user1::before {
+    background-color: @pink;
+  }
+
+  &--user2::before {
+    background-color: @green;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet) {
+    margin-bottom: 26px;
+    padding-right: 0;
+    font-size: 24px;
+    line-height: 22px;
+
+    &--user2 {
+      padding-right: 21px;
+    }
+
+    &::before {
+      top: 9px;
+      left: -22px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+
+.travellers__info-tag {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: @special-grey;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 28px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+.travellers__item--user2 .travellers__info-tag {
+  padding-right: 5px;
+}
+
+.travellers__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &--transports {
+    width: 25px;
+    height: 25px;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &--tooltip {
+    &:hover,
+    &:focus {
+      &::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: -66px;
+        left: 0;
+        z-index: 1;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 20px;
+        color: @white;
+        padding: 18px 21px;
+        background-color: @blue-darker;
+        border-radius: 4px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -13px;
+        left: 4px;
+        width: 14px;
+        height: 10px;
+        z-index: 1;
+        background: url("../img/tooltip-arrow.svg") 0 0 no-repeat;
+      }
+    }
+  }
+
+  &--countries {
+    width: 35px;
+    height: 25px;
+  }
+
+  &--countries:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &--srilanka {
+    background: url("../img/sri-lanka-icon.png") 0 0 no-repeat;
+  }
+
+  &--thailand {
+    background: url("../img/thailand-icon.png") 0 0 no-repeat;
+  }
+
+  &--seychelles {
+    background: url("../img/seychelles-icon.png") 0 0 no-repeat;
+  }
+
+  &--belgium {
+    background: url("../img/belgium-icon.png") 0 0 no-repeat;
+  }
+
+  &--czech {
+    background: url("../img/czech-icon.png") 0 0 no-repeat;
+  }
+
+  @media (min-resolution: 2dppx) {
+    &--srilanka {
+      background-image: url("../img/sri-lanka-icon@2x.png");
+      background-size: 35px auto;
+    }
+
+    &--thailand {
+      background-image: url("../img/thailand-icon@2x.png");
+      background-size: 35px auto;
+    }
+
+    &--seychelles {
+      background-image: url("../img/seychelles-icon@2x.png");
+      background-size: 35px auto;
+    }
+
+    &--belgium {
+      background-image: url("../img/belgium-icon@2x.png");
+      background-size: 35px auto;
+    }
+
+    &--czech {
+      background-image: url("../img/czech-icon@2x.png");
+      background-size: 35px auto;
+    }
+  }
+}
+
+.travellers__item--off svg {
+  opacity: 0.15;
+}
+
+.travellers__level-number {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  padding-top: 3px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  color: @white;
+
+  &--user1 {
+    background: url("../img/level-99-icon.svg") 0 0 no-repeat;
+  }
+
+  &--user2 {
+    background: url("../img/level-80-icon.svg") 0 0 no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 36px;
+    left: 15px;
+    width: 30px;
+    height: 1px;
+    background-color: @white;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet) {
+    top: 20px;
+    left: 22px;
+  }
+}
+
+.travellers__level-text {
+  padding-top: 1px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.travellers__button {
+  margin-top: 19px;
+
+  @media (min-width: @tablet) {
+    margin-top: 71px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 280px;
+    margin-bottom: 104px;
+    margin-left: 70px;
+  }
+}
+
+.travellers__image {
+  width: 100%;
+}

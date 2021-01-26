@@ -1,0 +1,65 @@
+.contacts-login {
+  display: flex;
+  width: 270px;
+
+  @media (min-width: @tablet) {
+    width: 188px;
+  }
+}
+
+.contacts-login__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  &--tel {
+    color: @special-orange;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: @dark-orange;
+    }
+  }
+
+  &--email {
+    color: @special-yellow-dark;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: @special-orange;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.contacts-login__button {
+  padding: 5px 40px;
+
+  @media (min-width: @tablet) {
+    padding: 15px 29px;
+  }
+
+  @media (min-width: @desktop) {
+    height: 50px;
+  }
+}
+
+.contacts-login__link:active path {
+  fill-opacity: 0.3;
+}
+
+.contacts-login__link-icon {
+  width: 40px;
+  height: 40px;
+
+  @media (min-width: @desktop) {
+    width: 50px;
+    height: 50px;
+  }
+}

@@ -1,0 +1,123 @@
+.tariffs-modal {
+  .container-mobile ();
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  align-items: center;
+  background-color: transparent;
+
+  &--show {
+    display: flex;
+  }
+
+  @media (min-width: @tablet) {
+    &--show {
+      .container-tablet ();
+    }
+  }
+}
+
+.tariffs-modal__wrapper {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding-top: 32px;
+  border-radius: 20px;
+  background-color: @white;
+  box-shadow: 0 2px 8px @basic-blue-light-14;
+
+  @media (min-width: @tablet) {
+    padding-top: 51px;
+  }
+}
+
+.tariffs-modal__title {
+  display: block;
+  margin: 0;
+  margin-bottom: 30px;
+  text-align: center;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 50px;
+  }
+}
+
+.tariffs-modal__list {
+  .container-mobile ();
+  margin: 0;
+
+  @media (min-width: @tablet) {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    padding: 0 93px 0 90px;
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+.tariffs-modal__definition {
+  margin: 0;
+  padding-bottom: 12px;
+
+  &:last-of-type {
+    border-bottom: 1px solid @grey-lighter;
+  }
+
+  @media (min-width: @tablet) {
+    padding: 12px 0 14px 0;
+    text-align: right;
+    border-top: 1px solid @grey-lighter;
+  }
+}
+
+.tariffs-modal__term {
+  position: relative;
+  padding-top: 9px;
+  border-top: 1px solid @grey-lighter;
+
+  @media (min-width: @tablet) {
+    padding: 12px 0 14px 0;
+
+    &:last-of-type {
+      border-bottom: 1px solid @grey-lighter;
+    }
+  }
+}
+
+.tariffs-modal__button {
+  width: 100%;
+  height: 59px;
+  margin-top: 37px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: @basic-blue-light;
+  background-color: @grey-blue;
+  border: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: @basic-grey-light;
+  }
+
+  @media (min-width: @tablet) {
+    margin-top: 51px;
+    padding: 40px 0 68px;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+  }
+}
+
+.tariffs-modal__button:active .tariffs-modal__button-text {
+  opacity: 0.3;
+}

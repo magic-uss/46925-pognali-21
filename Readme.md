@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Check status][check-image]][check-url]
 
 * Студент: [Ева Усс](https://up.htmlacademy.ru/adaptive/21/user/46925).
-* Наставник: `Неизвестно`.
+* Наставник: [Иван Жарков](https://htmlacademy.ru/profile/stalyer).
 
 ---
 

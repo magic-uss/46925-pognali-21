@@ -1,0 +1,151 @@
+.contacts {
+  &--header {
+    width: 270px;
+    margin: 0 auto 29px;
+  }
+
+  &--feedback {
+    margin-top: 18px;
+  }
+
+  @media (min-width: @tablet) {
+    &--header {
+      width: auto;
+      margin: 0;
+      margin-bottom: 113px;
+    }
+
+    &--feedback {
+      margin-top: 40px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    &--header {
+      display: none;
+    }
+
+    &--feedback {
+      display: flex;
+      padding-left: 5px;
+    }
+  }
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  color: @basic-yellow;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &--contact-info {
+    margin-bottom: 33px;
+  }
+
+  &:hover,
+  &:focus {
+    color: @special-yellow-dark;
+  }
+
+  @media (min-width: @tablet) {
+    font-size: 28px;
+    line-height: 28px;
+
+    &--contact-info {
+      margin-bottom: 45px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    box-sizing: border-box;
+
+    &--feedback {
+      width: 50%;
+    }
+
+    &:first-of-type {
+      padding-left: 220px;
+    }
+  }
+}
+
+.contacts__link:active use {
+  color: @special-yellow-dark;
+  opacity: 0.3;
+}
+
+.contacts__link-icon {
+  border-radius: 50%;
+  background-color: @blue-dark;
+
+  @media (min-width: @tablet) {
+    width: 68px;
+    height: 68px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.contacts__title {
+  padding-left: 16px;
+
+  &--header {
+    color: @blue;
+  }
+
+  &--feedback {
+    color: @basic-yellow;
+  }
+
+  &--contact-info {
+    color: @basic-blue-light;
+  }
+
+  @media (min-width: @tablet) {
+    padding-left: 22px;
+
+    &--contact-info {
+      padding-left: 26px;
+    }
+
+    &--feedback {
+      padding-top: 5px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    &--feedback {
+      padding-left: 33px;
+    }
+
+    &--contact-info {
+      padding-bottom: 4px;
+      padding-left: 33px;
+    }
+  }
+}
+
+.contacts__title--contact-info br {
+  @media (min-width: @tablet) {
+    display: none;
+  }
+}
+
+.contacts__link:hover .contacts__title--feedback,
+.contacts__link:focus .contacts__title--feedback,
+.contacts__link:hover .contacts__title--header,
+.contacts__link:focus .contacts__title--header {
+  color: @special-yellow-dark;
+}
+
+.contacts__link:active .contacts__title--feedback,
+.contacts__link:active .contacts__title--header {
+  opacity: 0.3;
+}

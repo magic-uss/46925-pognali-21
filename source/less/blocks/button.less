@@ -1,0 +1,96 @@
+.button {
+  display: block;
+  box-sizing: border-box;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: @basic-yellow;
+
+  &--login {
+    font-size: 17px;
+    line-height: 30px;
+    color: @basic-blue;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 25px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: @special-yellow-dark;
+    }
+  }
+
+  &--link {
+    padding: 22px;
+    font-size: 18px;
+    line-height: 18px;
+    color: @basic-blue-light;
+    border-radius: 10px;
+  }
+
+  &--link-all {
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: @special-yellow-dark;
+    }
+  }
+
+  &--link-route {
+    &:hover,
+    &:focus,
+    &:active {
+      color: @white;
+      background-color: @blue;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    &--login {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    &--link {
+      padding: 28px 33px;
+      font-size: 24px;
+      line-height: 24px;
+      border-radius: 20px;
+    }
+  }
+}
+
+.button:active .button__text {
+  opacity: 0.3;
+}
+
+.button__text {
+  &--link {
+    position: relative;
+    display: block;
+    width: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      right: -1px;
+      width: 13px;
+      height: 14px;
+      background: url("../img/button-arrow-blue-icon.svg") 0 0 no-repeat;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    &::after {
+      top: 8px;
+      right: -4px;
+    }
+  }
+}
+
+.button--link-route:hover .button__text::after,
+.button--link-route:focus .button__text::after,
+.button--link-route:active .button__text::after {
+  background-image: url("../img/button-arrow-white-icon.svg");
+}
