@@ -31,8 +31,26 @@ menuToggle.addEventListener('click', function() {
 /* menu scroll */
 
 document.addEventListener('scroll', function() {
-  logoHeader.classList.add('page-header__logo-wrapper--scroll');
-  menuToggle.classList.add('header-menu__toggle--scroll');
+  const pageWidth = document.documentElement.clientWidth;
+  const pageHeight = pageYOffset;
+
+  if (pageWidth >= 1440) {
+    if (pageHeight < 750) {
+      logoHeader.classList.remove('page-header__logo-wrapper--scroll');
+      menuToggle.classList.remove('header-menu__toggle--scroll');
+    } else {
+    logoHeader.classList.add('page-header__logo-wrapper--scroll');
+    menuToggle.classList.add('header-menu__toggle--scroll');
+    }
+  } else {
+    if (pageHeight == 0) {
+      logoHeader.classList.remove('page-header__logo-wrapper--scroll');
+      menuToggle.classList.remove('header-menu__toggle--scroll');
+    } else {
+    logoHeader.classList.add('page-header__logo-wrapper--scroll');
+    menuToggle.classList.add('header-menu__toggle--scroll');
+    }
+  }
 });
 
 /* modal show/close */

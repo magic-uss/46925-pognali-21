@@ -190,14 +190,14 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: -6px;
-  padding: 25px 36px 12px 41px;
+  padding: 25px 36px 11px 41px;
   background-color: @white;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 
   @media (min-width: @tablet) {
-    padding: 29px 30px 14px;
+    margin-top: -3px;
+    padding: 33px 30px 17px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
@@ -242,7 +242,7 @@
   }
 
   @media (min-width: @tablet) {
-    margin-bottom: 26px;
+    margin-bottom: 24px;
     padding-right: 0;
     font-size: 24px;
     line-height: 22px;
@@ -270,7 +270,7 @@
   color: @special-grey;
 
   @media (min-width: @tablet) {
-    margin-bottom: 28px;
+    margin-bottom: 26px;
     font-size: 20px;
     line-height: 23px;
   }
@@ -287,15 +287,6 @@
     margin-bottom: 9px;
   }
 
-  &--transports {
-    width: 25px;
-    height: 25px;
-
-    &:not(:last-child) {
-      margin-right: 8px;
-    }
-  }
-
   &--tooltip {
     &:hover,
     &:focus {
@@ -303,7 +294,6 @@
         content: attr(data-tooltip);
         position: absolute;
         bottom: -66px;
-        left: 0;
         z-index: 1;
         font-weight: normal;
         font-size: 20px;
@@ -318,7 +308,6 @@
         content: "";
         position: absolute;
         bottom: -13px;
-        left: 4px;
         width: 14px;
         height: 10px;
         z-index: 1;
@@ -327,33 +316,127 @@
     }
   }
 
+  &--transports {
+    width: 25px;
+    height: 25px;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        left: 4px;
+      }
+    }
+  }
+
+  &--plane {
+    &:hover,
+    &:focus {
+      &::after {
+        left: -61px;
+      }
+    }
+  }
+
+  &--bus {
+    &:hover,
+    &:focus {
+      &::after {
+        left: -68px;
+      }
+    }
+  }
+
+  &--bicycle {
+    &:hover,
+    &:focus {
+      &::after {
+        left: -52px;
+      }
+    }
+  }
+
+  &--run {
+    &:hover,
+    &:focus {
+      &::after {
+        left: -41px;
+      }
+    }
+  }
+
   &--countries {
     width: 35px;
     height: 25px;
-  }
 
-  &--countries:not(:last-child) {
-    margin-right: 20px;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        left: 11px;
+      }
+    }
   }
 
   &--srilanka {
     background: url("../img/sri-lanka-icon.png") 0 0 no-repeat;
+
+    &:hover,
+    &:focus {
+      &::after {
+        left: -52px;
+      }
+    }
   }
 
   &--thailand {
     background: url("../img/thailand-icon.png") 0 0 no-repeat;
+
+    &:hover,
+    &:focus {
+      &::after {
+        left: -38px;
+      }
+    }
   }
 
   &--seychelles {
     background: url("../img/seychelles-icon.png") 0 0 no-repeat;
+
+    &:hover,
+    &:focus {
+      &::after {
+        left: -46px;
+      }
+    }
   }
 
   &--belgium {
     background: url("../img/belgium-icon.png") 0 0 no-repeat;
+
+    &:hover,
+    &:focus {
+      &::after {
+        left: -37px;
+      }
+    }
   }
 
   &--czech {
     background: url("../img/czech-icon.png") 0 0 no-repeat;
+
+    &:hover,
+    &:focus {
+      &::after {
+        left: -28px;
+      }
+    }
   }
 
   @media (min-resolution: 2dppx) {
@@ -437,7 +520,7 @@
 }
 
 .travellers__button {
-  margin-top: 19px;
+  margin-top: 20px;
 
   @media (min-width: @tablet) {
     margin-top: 71px;
@@ -451,5 +534,6 @@
 }
 
 .travellers__image {
+  display: block;
   width: 100%;
 }

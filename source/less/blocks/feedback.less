@@ -123,13 +123,13 @@
   border: none;
   border-radius: 10px;
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: @special-grey-5;
     background-color: @basic-grey-light;
   }
 
-  &:active {
+  &:active,
+  &:focus {
     padding: 15px 66px 18px 21px;
     color: @white;
     opacity: 1;
@@ -148,7 +148,8 @@
     line-height: 24px;
     border-radius: 20px;
 
-    &:active {
+    &:active,
+    &:focus {
       padding: 20px 86px 24px 32px;
     }
   }
